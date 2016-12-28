@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html>
+  <head>
+      <link href="/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+      
+  </head>
+<body>
+    <div class="container">
+		@if (model.error) {
+			<p class="text-error">Error occured @model.error</p>
+		}
+
+        <div class="row">
+            <div class="list-group col-lg-6">
+                User was added @model.data.name
+            </div> 
+        </div>
+    </div>
+
+    <script src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/libs/jquery/dist/jquery.min.js"></script>
+</body>
+
+</html>

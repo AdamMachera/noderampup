@@ -1,0 +1,24 @@
+﻿@html.extend('layout', function(model) {
+  @html.block("content", function(model) {
+  @if (model.error) {
+  <p class="text-error">Error occured @model.error</p>
+        }
+
+      <div class="row">
+        <div class="list-group col-lg-6">
+          @model.data.forEach(function(data){
+          <a href="#" class="list-group-item list-group-item-info">@data.user - @data.name</a>
+          })
+        </div>
+      </div>
+
+      <div class="row">
+        <form action="/home/newuser" role="form" method="post" class="form-inline">
+          <input type="text" name="userId" placeholder="userId" class="form-control" />
+          <input type="text" name="name" placeholder="userName" class="form-control" />
+          <input type="submit" value="New user" class="btn btn-primary" />
+        </form>
+      </div>
+  })
+})
+
